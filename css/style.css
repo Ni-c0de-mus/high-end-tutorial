@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Coda|Comfortaa|Poiret+One|Prosto+One|Righteous|Sniglet|Unica+One&display=swap");
+
+*,
+*::before,
+*::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: inherit;
+}
+
+/* Variables */
+
+:root {
+ /* Fonts */
+
+ --comfortaa: "Comfortaa", cursive;
+ --righteous: "Righteous", cursive;
+ --sniglet: "Sniglet", cursive;
+ --poiret-one: "Poiret One", cursive;
+ --unica-one: "Unica One", cursive;
+ --prosto-one: "Prosto One", cursive;
+ --coda: "Coda", cursive;
+
+ /* Coolors */
+
+ --mid-blue: #75dddd;
+ --dark-sky: #84c7d0;
+ --ceil: #9297c4;
+ --majesty: #9368b7;
+ --fandango: #aa3e98;
+ --azureish: #d9f0ff;
+ --winter-wizard: #a3d5ff;
+ --bone: #e1dabd;
+ --laurel-green: #abc798;
+ --classic-rose: #ffc4eb;
+ --desert: #e6beae;
+ --pale-taupe: #b2967d;
+ --wenge: #6b6054;
+ --artichoke: #929487;
+ --silver-chalice: #a1b0ab;
+ --waterspout: #a8f9ff;
+ --photo-blue: #9ae5e6;
+ --white: #fff;
+ --black: #000;
+}
+
+html {
+ font-size: 10px;
+ box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+ position: relative;
+ width: 100%;
+ overflow: hidden;
+ height: 105vh;
+ padding-top: 2rem;
+}
+
+#nav {
+ display: flex;
+ justify-content: center;
+ padding: 2rem 3rem;
+ position: absolute;
+ transform: all 300ms;
+ background: var(--white);
+ z-index: 9;
+ top: 0;
+ width: 100%;
+ font-size: 1.8rem;
+}
+
+#nav ul {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+}
+
+#nav ul li {
+ display: flex;
+}
+
+#nav ul li a {
+ font-family: var(--sniglet), sans-serif;
+ padding: 0.3rem 0;
+ margin: 0 3.5rem;
+}
+
+#nav ul li.logo .black {
+ display: none;
+}
+
+#nav ul li.logo a {
+ margin: 0 4rem;
+}
+
+/* Nav Icon Hamburger */
+
+.nav__icon {
+ position: absolute;
+ top: 1.8rem;
+ right: 2rem;
+ padding: 0.5rem;
+ width: 4rem;
+ z-index: 1;
+ cursor: pointer;
+}
+
+.nav__icon span {
+ background: #333;
+ width: 3rem;
+ height: 0.2rem;
+ display: block;
+ transition: 300ms linear all;
+}
+
+.nav__icon span:nth-child(1),
+.nav__icon span:nth-child(3) {
+ width: 2rem;
+ margin: 0.5rem auto;
+}
+
+.nav__icon:nth-child(2) {
+ margin: 0.5rem 0;
+ width: 3.2rem;
+}
+
+.nav__icon:hover span:nth-child(1),
+.nav__icon:hover span:nth-child(3) {
+ width: 3rem;
+}
+
+/* Res Nav Menu */
+
+.nav__list__res {
+ height: 50rem;
+}
