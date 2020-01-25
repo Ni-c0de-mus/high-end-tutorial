@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo|Bebas+Neue|Noto+Sans+JP|Noto+Sans+KR|Nunito|Public+Sans|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Solway|Sulphur+Point|Tomorrow|Ubuntu|Work+Sans&display=swap');
+
+*,
+*::before,
+*::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: inherit;
+}
+
+/* Variables */
+
+:root {
+
+ /* Fonts */
+
+ --roboto: 'Roboto', sans-serif;
+ --solway: 'Solway', serif;
+ --bebas-neue: 'Bebas Neue', cursive;
+ --sulphur-point: 'Sulphur Point', sans-serif;
+ --roboto-cond: 'Roboto Condensed', sans-serif;
+ --raleway: 'Raleway', sans-serif;
+ --roboto-mono: 'Roboto Mono', monospace;
+ --public-sans: 'Public Sans', sans-serif;
+ --nunito: 'Nunito', sans-serif;
+ --noto-sans-jp: 'Noto Sans JP', sans-serif;
+ --work-sans: 'Work Sans', sans-serif;
+ --tomorrow: 'Tomorrow', sans-serif;
+ --arimo: 'Arimo', sans-serif;
+ --noto-sans-kr: 'Noto Sans KR', sans-serif;
+
+ /* Coolors */
+
+ --reg-green: #002400;
+ --leather-green: #273B09;
+ --antique-bronze: #58641D;
+ --palm-leaf: #7B904B;
+ --gainsboro: #DBD2E0;
+ --white: #FFFFFF;
+ --cambridge-blue: #9DB5B2;
+ --azurish-white: #DAF0EE;
+ --pearl-aqua: #94D1BE;
+ --ras-pink: #E36397;
+ --opera-mauve: #BC8DA7;
+ --gray-x11: #BDB4BF;
+ --gainsboro-2: #D9D9D9;
+ --flash-white: #EFF2EF;
+ --desert-sand: #DBD8AE;
+ --antique-brass: #CA907E;
+ --chestnut: #994636;
+ --grizzly: #895B1E;
+ --sky-blue: #88D9E6;
+ --gray-blue: #8B8BAE;
+ --stormcloud: #526760;
+ --charcoal: #374B4A;
+ --gunmetal: #2D3142;
+ --silver: #BFC0C0;
+ --red-ochre: #EF8354;
+ --black-coral: #4F5D75;
+ --cerulean: #2B59C3;
+ --st-patrick: #253C78;
+ --champion: #D36582;
+ --khaki-css: #C9A690;
+ --spanish-gray: #A2999E;
+ --pastel-brown: #846A6A;
+ --onyx: #353B3C;
+ --cornflower: #AFCBFF;
+ --maastricht: #0E1C36;
+ --peach-puff: #F7D4BC;
+ --siver-pink: #CFA5B4;
+ --purple: #C98BB9;
+ --chinese-violet: #846B8A;
+ --black: #000;
+ --white: #fff;
+}
+
+html {
+ font-size: 10px;
+ box-sizing: border-box;
+}
+
+a {
+ text-decoration: none;
+}
+
+ul {
+ list-style: none;
+}
+
+img {
+ width: 100%;
+ max-width: 100%;
+ height: auto;
+}
+
+p {
+ font-size: 1.6rem;
+}
+
+.btn {
+ border-radius: .2rem;
+ padding: 1rem 2rem;
+ background-color: var(--palm-leaf);
+ color: var(--white);
+ font-size: 1rem;
+ text-transform: uppercase;
+ letter-spacing: .2rem;
+ text-align: center;
+ transition: 420ms ease;
+}
+
+.btn:hover {
+ background-color: var(--chestnut);
+ border: 1px solid var(--white);
+}
+
+section {
+ padding: 5rem 0;
+}
+
+body {
+ font-family: var(--solway);
+}
+
+/* Header */
+
+header {
+ width: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
+}
+
+.container {
+ width: 100%;
+ max-width: 98rem;
+ padding: 0 1rem;
+ margin: 0 auto;
+}
+
+.nav__brand {
+ width: 15rem;
+}
+
+.menu__icons {
+ font-size: 3.5rem;
+ color: var(--palm-leaf);
+ cursor: pointer;
+ transition: 420ms ease;
+}
+
+.menu__icons:hover {
+ color: var(--chestnut);
+}
+
+nav {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin: 1rem 0;
+}
+
+.nav__list {
+ width: 25rem;
+ height: 100vh;
+ background: var(--st-patrick);
+ position: fixed;
+ top: 0;
+ right: -26rem;
+ opacity: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ transition: all 630ms ease-in-out, opacity 810ms ease;
+ z-index: 1300;
+}
+
+.nav__list.active {
+ opacity: 1;
+ top: 0;
+ right: 0;
+}
+
+.close {
+ position: absolute;
+ top: 2rem;
+ left: 2rem;
+}
+
+.nav__item {
+ margin: 1.5rem;
+}
+
+.nav__link {
+ font-size: 1.6rem;
+ color: var(--white);
+ text-transform: uppercase;
+ transition: 420ms ease;
+}
+
+.nav__link:hover {
+ color: var(--palm-leaf);
+}
+
+@media screen and (min-width: 600px) {
+
+ .nav__list {
+  width: initial;
+  height: initial;
+  background: transparent;
+  position: initial;
+  top: initial;
+  right: initial;
+  opacity: initial;
+  flex-direction: row;
+  transition: initial;
+ }
+
+ .menu__icons {
+  display: none;
+ }
+
+ .nav__link {
+  margin: 0 3rem;
+  color: var(--chestnut);
+ }
+
+}
+
+/* Hero */
+
+#hero {
+ width: 100%;
+ height: 80vh;
+ background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 7) 100%), url('../img/boardwalk.jpeg') center no-repeat;
+ background-size: cover;
+ position: relative;
+}
